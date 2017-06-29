@@ -20,7 +20,7 @@ class TodosController < ApplicationController
       render :new
     else
       redirect_to '/todos/'
-
+    end
   end
 
   def destroy
@@ -37,7 +37,7 @@ class TodosController < ApplicationController
       render :edit
     else
       redirect_to '/todos/'
-
+    end
   end
 
   def index
@@ -58,3 +58,4 @@ def print_this
 end
 
 end
+

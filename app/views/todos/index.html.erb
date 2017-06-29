@@ -20,11 +20,14 @@
  	<td><%= todo.urgent %></td>
     <td><%= todo.deadline %></td>
     <td>
-    	<%= link_to 'Edit', url_for(controller: 'todos',action: 'edit',id: todo.id) %>
-    	<%= link_to 'Destroy' url_for(controller: 'todos',action: 'destroy',id:todo.id),method: :delete , data: {confirm: "Are you Sure ?"}%>
+    	<%= link_to 'Edit', url_for(controller: 'todos',action: 'edit',id: todo.id) %> , 
+    	
+    	<%= link_to 'Destroy', url_for(controller: 'todos',action: 'destroy',id: todo.id),method: :delete , data: {confirm: "Are you Sure?"}%> 
+    	
+    	
     </td>
 </tr>
 <% end %>
 </table>
 
-<%= link_to 'New Todo' ,todos_new_path %>
+<%= link_to 'New Todo' ,url_for(controller: 'todos',action: 'new') %> , 
